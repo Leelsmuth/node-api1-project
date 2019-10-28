@@ -16,17 +16,15 @@ function App() {
 
   return (
     <div className="App">
-      {users
-        ? users.map(user => (
-            <div key={user.id} className="user">
-              <p>ID: {user.id}</p>
-              <p>Name: {user.name}</p>
-              <p>Bio: {user.bio}</p>
-              <button className="removeUser">Remove</button>
-              <button className="editUser">Edit</button>
-            </div>
-          ))
-        : null}
+      {users.map(user => (
+        <div key={user.id} className="user">
+          <p>ID: {user.id}</p>
+          <p>Name: {user.name}</p>
+          <p>Bio: {user.bio}</p>
+          <button className="removeUser">Remove</button>
+          <button className="editUser">Edit</button>
+        </div>
+      ))}
     </div>
   );
 }
